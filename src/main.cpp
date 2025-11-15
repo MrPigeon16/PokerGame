@@ -1,10 +1,12 @@
+#include "GrpcServices/AuthServiceImpl.h"
 #include "Server.h"
 #include <grpcpp/grpcpp.h>
 #include <grpcpp/impl/service_type.h>
+#include <grpcpp/support/interceptor.h>
+#include <grpcpp/support/server_interceptor.h>
+#include <string>
 #include <vector>
 #include "ServerConfig.h"
-#include "protos/hello.grpc.pb.h"
-#include "protos/hello.pb.h"
 
 /*
  *  Auth Service / MsSql / In memry cache;
@@ -14,19 +16,16 @@
  *
  */
 
-class MyServiceImpl final : public hello::HelloService::Service {
-public:
-    grpc::Status SayHello(grpc::ServerContext* context, const hello::HelloRequest* request, hello::HelloResponse* response) override {
-        response->set_reply("Hello, " + request->greeting());
-        return grpc::Status::OK;
-    }
-};
 
 int main(){
     std::vector<grpc::Service*> services;
-    MyServiceImpl service;
-    services.push_back(&service);
+
+    AuthServiceImpl authService;
+    services.push_back(&authService);
+
     ServerConfig serverConfig("0.0.0.0", 8080);
-    Server server(serverConfig, services);
+
+    Server server(serverConfig, services, "poker");
+
     server.run();
 }

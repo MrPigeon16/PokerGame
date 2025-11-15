@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package poker;
+
+service AuthService {
+    rpc Signin(AuthRequest) returns (AuthResponse);
+    rpc Login(AuthRequest) returns (AuthResponse);
+}
+
+message AuthRequest {
+    string email = 1;
+    string password = 2;
+}
+
+message AuthResponse {
+    string responseString = 1;
+}
