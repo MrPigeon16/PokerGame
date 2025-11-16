@@ -9,6 +9,7 @@
 #include <string>
 #include <unordered_map>
 #include <utility>
+#include <vector>
 
 Server::Server(ServerConfig& config, std::string protoPackage) : serverConfig(config), builder(), protoPackage(protoPackage){
     std::string server_address = this->serverConfig.host + ":" + std::to_string(this->serverConfig.port);
@@ -67,4 +68,12 @@ void Server::run() {
 
 std::string Server::getProtoPackage() {
     return this->protoPackage;
+}
+
+std::vector<Validator*> Server::getValidators() {
+    return this->validators;
+}
+
+void Server::addValidator(Validator* validator) {
+    this->validators.push_back(validator);
 }

@@ -1,12 +1,10 @@
 #include "GrpcServices/AuthServiceImpl.h"
 #include <exception>
 #include <grpcpp/support/status.h>
-#include <regex>
 #include <sqlite_modern_cpp.h>
 #include <sqlite3.h>
 #include "DbState.h"
 #include "JwtHelper.h"
-#include "Validators/Validators.h"
 #include "openssl/sha.h"
 #include <chrono>
 
@@ -24,24 +22,9 @@ std::string sha256(const std::string& str) {
     return ss.str();
 }
 
-bool isValidPassword(const std::string& password) {
-    const std::regex pattern(R"(^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*-+])[A-Za-z\d!@#$%^&*-+]{8,64}$)");
-
-    return std::regex_match(password, pattern);
-}
 
 grpc::Status AuthServiceImpl::Signin(grpc::ServerContext* context, const poker::AuthRequest* request, poker::AuthResponse* response) {
     const std::string& email = request->email();
-
-    if (!validate_email(email)) {
-        response->set_responsestring("Email is not valid");
-        return grpc::Status(grpc::StatusCode::INVALID_ARGUMENT, "Email is not valid");
-    }
-
-    if (!isValidPassword(request->password())) {
-        response->set_responsestring("Password is not valid");
-        return grpc::Status(grpc::StatusCode::INVALID_ARGUMENT, "Password is invalid");
-    }
 
     try {
         sqlite::database& db = DbState::getInstance().getConnection();
