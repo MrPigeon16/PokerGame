@@ -16,9 +16,14 @@ public:
 	void fold();
 	int getPlayerID();
 	string getPlayerUsername();
+
 	void setHand(vector<Card> cards);
 	void setPlayerState(PlayerState s);
-
+	
+	
+	int getPlayerPostion();
+	vector<Card> getHandPlayerHnad();
+	PlayerState getPlayerState();
 
 	
 private:

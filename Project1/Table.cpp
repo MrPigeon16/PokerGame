@@ -15,7 +15,7 @@ void Table::addPlayer(Player* p)
 void Table::removePlayer(int playerID)
 {
 	Player* p = nullptr;
-	// Find the player with this ID
+	// Find the player with his ID
 	try
 	{
 		for (auto& player : this->players)
@@ -43,7 +43,12 @@ void Table::dealCards()
 	}
 }
 
+void Table::applyAction(Action& act, Player& player)
+{
+	this->state;
+	//not done
+}
+
 Table::~Table()
 {
-	delete this->deck;
 }

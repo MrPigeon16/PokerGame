@@ -7,5 +7,9 @@ BetAction::BetAction(int amount)
 
 void BetAction::executeAction(Table& table, Player& player)
 {
-	// SOON
+
+	if (!(player.bet(this->amount))) {
+		throw "BetAction: player don't have enough funds";
+	}
+	
 }

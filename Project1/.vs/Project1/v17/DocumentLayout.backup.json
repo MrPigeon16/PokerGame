@@ -3,32 +3,60 @@
   "WorkspaceRootPath": "D:\\s\\Project1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E29C406C-6B88-43EA-8714-EEA290685001}|Project1.vcxproj|D:\\s\\Project1\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{E29C406C-6B88-43EA-8714-EEA290685001}|Project1.vcxproj|solutionrelative:Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{E29C406C-6B88-43EA-8714-EEA290685001}|Project1.vcxproj|D:\\s\\Project1\\BetAction.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E29C406C-6B88-43EA-8714-EEA290685001}|Project1.vcxproj|solutionrelative:BetAction.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E29C406C-6B88-43EA-8714-EEA290685001}|Project1.vcxproj|D:\\s\\Project1\\Table.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E29C406C-6B88-43EA-8714-EEA290685001}|Project1.vcxproj|solutionrelative:Table.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E29C406C-6B88-43EA-8714-EEA290685001}|Project1.vcxproj|D:\\s\\Project1\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{E29C406C-6B88-43EA-8714-EEA290685001}|Project1.vcxproj|solutionrelative:Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E29C406C-6B88-43EA-8714-EEA290685001}|Project1.vcxproj|D:\\s\\Project1\\Deck.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{E29C406C-6B88-43EA-8714-EEA290685001}|Project1.vcxproj|solutionrelative:Deck.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E29C406C-6B88-43EA-8714-EEA290685001}|Project1.vcxproj|D:\\s\\Project1\\structs.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{E29C406C-6B88-43EA-8714-EEA290685001}|Project1.vcxproj|solutionrelative:structs.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{E29C406C-6B88-43EA-8714-EEA290685001}|Project1.vcxproj|D:\\s\\Project1\\Deck.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E29C406C-6B88-43EA-8714-EEA290685001}|Project1.vcxproj|solutionrelative:Deck.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E29C406C-6B88-43EA-8714-EEA290685001}|Project1.vcxproj|D:\\s\\Project1\\Table.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{E29C406C-6B88-43EA-8714-EEA290685001}|Project1.vcxproj|solutionrelative:Table.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E29C406C-6B88-43EA-8714-EEA290685001}|Project1.vcxproj|D:\\s\\Project1\\TableManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{E29C406C-6B88-43EA-8714-EEA290685001}|Project1.vcxproj|solutionrelative:TableManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{E29C406C-6B88-43EA-8714-EEA290685001}|Project1.vcxproj|D:\\s\\Project1\\structs.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E29C406C-6B88-43EA-8714-EEA290685001}|Project1.vcxproj|solutionrelative:structs.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E29C406C-6B88-43EA-8714-EEA290685001}|Project1.vcxproj|D:\\s\\Project1\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E29C406C-6B88-43EA-8714-EEA290685001}|Project1.vcxproj|solutionrelative:Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E29C406C-6B88-43EA-8714-EEA290685001}|Project1.vcxproj|D:\\s\\Project1\\GameState.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E29C406C-6B88-43EA-8714-EEA290685001}|Project1.vcxproj|solutionrelative:GameState.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E29C406C-6B88-43EA-8714-EEA290685001}|Project1.vcxproj|D:\\s\\Project1\\Deck.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E29C406C-6B88-43EA-8714-EEA290685001}|Project1.vcxproj|solutionrelative:Deck.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E29C406C-6B88-43EA-8714-EEA290685001}|Project1.vcxproj|D:\\s\\Project1\\Card.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{E29C406C-6B88-43EA-8714-EEA290685001}|Project1.vcxproj|solutionrelative:Card.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E29C406C-6B88-43EA-8714-EEA290685001}|Project1.vcxproj|D:\\s\\Project1\\BetAction.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E29C406C-6B88-43EA-8714-EEA290685001}|Project1.vcxproj|solutionrelative:BetAction.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E29C406C-6B88-43EA-8714-EEA290685001}|Project1.vcxproj|D:\\s\\Project1\\Action.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E29C406C-6B88-43EA-8714-EEA290685001}|Project1.vcxproj|solutionrelative:Action.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E29C406C-6B88-43EA-8714-EEA290685001}|Project1.vcxproj|D:\\s\\Project1\\TableManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E29C406C-6B88-43EA-8714-EEA290685001}|Project1.vcxproj|solutionrelative:TableManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E29C406C-6B88-43EA-8714-EEA290685001}|Project1.vcxproj|D:\\s\\Project1\\Card.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E29C406C-6B88-43EA-8714-EEA290685001}|Project1.vcxproj|solutionrelative:Card.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +66,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,52 +74,104 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
+              "Title": "GameState.h",
+              "DocumentMoniker": "D:\\s\\Project1\\GameState.h",
+              "RelativeDocumentMoniker": "GameState.h",
+              "ToolTip": "D:\\s\\Project1\\GameState.h",
+              "RelativeToolTip": "GameState.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-11-16T22:25:57.037Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Deck.cpp",
+              "DocumentMoniker": "D:\\s\\Project1\\Deck.cpp",
+              "RelativeDocumentMoniker": "Deck.cpp",
+              "ToolTip": "D:\\s\\Project1\\Deck.cpp",
+              "RelativeToolTip": "Deck.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-11-16T20:44:57.218Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BetAction.cpp",
+              "DocumentMoniker": "D:\\s\\Project1\\BetAction.cpp",
+              "RelativeDocumentMoniker": "BetAction.cpp",
+              "ToolTip": "D:\\s\\Project1\\BetAction.cpp",
+              "RelativeToolTip": "BetAction.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-11-16T20:36:45.04Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "BetAction.h",
+              "DocumentMoniker": "D:\\s\\Project1\\BetAction.h",
+              "RelativeDocumentMoniker": "BetAction.h",
+              "ToolTip": "D:\\s\\Project1\\BetAction.h",
+              "RelativeToolTip": "BetAction.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-11-16T20:34:37.682Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Player.h",
+              "DocumentMoniker": "D:\\s\\Project1\\Player.h",
+              "RelativeDocumentMoniker": "Player.h",
+              "ToolTip": "D:\\s\\Project1\\Player.h",
+              "RelativeToolTip": "Player.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-11-16T14:49:33.355Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Player.cpp",
               "DocumentMoniker": "D:\\s\\Project1\\Player.cpp",
               "RelativeDocumentMoniker": "Player.cpp",
               "ToolTip": "D:\\s\\Project1\\Player.cpp",
               "RelativeToolTip": "Player.cpp",
-              "ViewState": "AgIAAAkAAAAAAAAAAAApwBcAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-11-16T15:43:00.431Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "structs.h",
               "DocumentMoniker": "D:\\s\\Project1\\structs.h",
               "RelativeDocumentMoniker": "structs.h",
               "ToolTip": "D:\\s\\Project1\\structs.h",
               "RelativeToolTip": "structs.h",
-              "ViewState": "AgIAABMAAAAAAAAAAAApwB8AAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAADwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-11-16T15:10:59.276Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Card.h",
-              "DocumentMoniker": "D:\\s\\Project1\\Card.h",
-              "RelativeDocumentMoniker": "Card.h",
-              "ToolTip": "D:\\s\\Project1\\Card.h",
-              "RelativeToolTip": "Card.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-16T15:08:53.744Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "Deck.h",
               "DocumentMoniker": "D:\\s\\Project1\\Deck.h",
               "RelativeDocumentMoniker": "Deck.h",
               "ToolTip": "D:\\s\\Project1\\Deck.h",
               "RelativeToolTip": "Deck.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-11-16T15:07:47.93Z",
               "EditorCaption": ""
@@ -104,14 +184,14 @@
               "RelativeDocumentMoniker": "Table.h",
               "ToolTip": "D:\\s\\Project1\\Table.h",
               "RelativeToolTip": "Table.h",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-11-16T14:59:14.647Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 12,
               "Title": "TableManager.h",
               "DocumentMoniker": "D:\\s\\Project1\\TableManager.h",
               "RelativeDocumentMoniker": "TableManager.h",
@@ -124,15 +204,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Player.h",
-              "DocumentMoniker": "D:\\s\\Project1\\Player.h",
-              "RelativeDocumentMoniker": "Player.h",
-              "ToolTip": "D:\\s\\Project1\\Player.h",
-              "RelativeToolTip": "Player.h",
-              "ViewState": "AgIAAAMAAAAAAAAAAAApwBIAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 11,
+              "Title": "Action.h",
+              "DocumentMoniker": "D:\\s\\Project1\\Action.h",
+              "RelativeDocumentMoniker": "Action.h",
+              "ToolTip": "D:\\s\\Project1\\Action.h",
+              "RelativeToolTip": "Action.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-16T14:49:33.355Z",
+              "WhenOpened": "2025-11-16T20:32:38.337Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Card.h",
+              "DocumentMoniker": "D:\\s\\Project1\\Card.h",
+              "RelativeDocumentMoniker": "Card.h",
+              "ToolTip": "D:\\s\\Project1\\Card.h",
+              "RelativeToolTip": "Card.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-11-16T15:08:53.744Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Table.cpp",
+              "DocumentMoniker": "D:\\s\\Project1\\Table.cpp",
+              "RelativeDocumentMoniker": "Table.cpp",
+              "ToolTip": "D:\\s\\Project1\\Table.cpp",
+              "RelativeToolTip": "Table.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-11-16T21:21:30.362Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Card.cpp",
+              "DocumentMoniker": "D:\\s\\Project1\\Card.cpp",
+              "RelativeDocumentMoniker": "Card.cpp",
+              "ToolTip": "D:\\s\\Project1\\Card.cpp",
+              "RelativeToolTip": "Card.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-11-16T20:48:44.928Z",
               "EditorCaption": ""
             },
             {

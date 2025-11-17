@@ -24,5 +24,29 @@ void Player::fold()
 	this->state = FOLDED;
 }
 
+
+void Player::resetHand() { this->hand.clear(); }
+
+
+// Getters
 int Player::getPlayerID() { return this->id; }
+
+string Player::getPlayerUsername() { return this->username; }
+
+int Player::getPlayerPostion() { return this->tablePosition; }
+
+vector<Card> Player::getHandPlayerHnad() { return this->hand; }
+
+PlayerState Player::getPlayerState() { return this->state; }
+
+
+
+
+// Setters
+void Player::setHand(vector<Card> cards) { this->hand = cards; }
+
+void Player::setPlayerState(PlayerState s) { this->state = s; }
+
+
+
 

@@ -10,7 +10,7 @@ class TableManager
 {
 
 public:
-	int createTable(int maxPlayers);
+	int createTable(int maxPlayers, int bigBlid);
 	void deleteTable(int tableID);
 	Table* getTable(int tableID);
 	void joinTable(int playerID, int tableID);

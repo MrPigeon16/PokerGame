@@ -5,6 +5,7 @@
 #include "Deck.h"
 #include "Card.h"
 #include "structs.h"
+#include "Action.h"
 using namespace std;
 
 
@@ -16,10 +17,10 @@ public:
 	void addPlayer(Player* p);
 	void removePlayer(int playerID);
 	void dealCards();
-	void dealFlop();
-	void dealTurn();
-	void dealRiver();
-	void applyAction(int playerID, ActionType , int amout);
+	//void dealFlop();
+	//void dealTurn();
+	//void dealRiver();
+	void applyAction(Action& act, Player& player);
 	~Table();
 
 
