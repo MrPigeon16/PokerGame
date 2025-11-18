@@ -1,6 +1,7 @@
 #include "GrpcServices/AuthServiceImpl.h"
 #include <exception>
 #include <grpcpp/support/status.h>
+#include <optional>
 #include <sqlite_modern_cpp.h>
 #include <sqlite3.h>
 #include "DbState.h"
@@ -24,6 +25,11 @@ std::string sha256(const std::string& str) {
 
 
 grpc::Status AuthServiceImpl::Signin(grpc::ServerContext* context, const poker::AuthRequest* request, poker::AuthResponse* response) {
+    if (request->cancell()) {
+
+        return grpc::Status(grpc::StatusCode::CANCELLED, request->cancellmessage());
+    }
+
     const std::string& email = request->email();
 
     try {
@@ -57,15 +63,24 @@ grpc::Status AuthServiceImpl::Signin(grpc::ServerContext* context, const poker::
 
 
 grpc::Status AuthServiceImpl::Login(grpc::ServerContext* context, const poker::AuthRequest* request, poker::AuthResponse* response) {
+    if (request->cancell()) {
 
+        return grpc::Status(grpc::StatusCode::CANCELLED, request->cancellmessage());
+    }
  // Yuisj26! pass for ilayGay;
 
     try {
         sqlite::database& db = DbState::getInstance().getConnection();
         std::string hashedPassword = sha256(request->password());
         bool found = false;
-        std::string password;
-        db << "SELECT password FROM Users WHERE email = ? LIMIT 1;" << request->email() >> password;
+        std::optional<std::string> password;
+        db << "SELECT password FROM Users WHERE email = ? LIMIT 1;" << request->email() >> [&password](std::string pass) {
+            password = pass;
+        };
+
+        if (!password.has_value()) {
+            return grpc::Status(grpc::StatusCode::NOT_FOUND, "User with those credentials does not exists");
+        }
 
         if (sha256(request->password()) != password) {
             return grpc::Status(grpc::StatusCode::NOT_FOUND, "User with those credentials does not exists");

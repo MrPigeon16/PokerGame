@@ -4,9 +4,11 @@
 #include <grpcpp/impl/service_type.h>
 #include <grpcpp/support/interceptor.h>
 #include <grpcpp/support/server_interceptor.h>
+#include <memory>
 #include <string>
 #include <vector>
 #include "ServerConfig.h"
+#include "Validators.h"
 
 /*
  *  Auth Service / MsSql / In memry cache;
@@ -26,6 +28,9 @@ int main(){
     ServerConfig serverConfig("0.0.0.0", 8080);
 
     Server server(serverConfig, services, "poker");
-
+    server.addValidator(std::make_unique<PasswordValidator>("AuthService", "Signin", "password"));
+    server.addValidator(std::make_unique<EmailValidator>("AuthService", "Signin", "email"));
+    server.addValidator(std::make_unique<PasswordValidator>("AuthService", "Login", "password"));
+    server.addValidator(std::make_unique<EmailValidator>("AuthService", "Login", "email"));
     server.run();
 }

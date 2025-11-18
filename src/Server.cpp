@@ -1,5 +1,6 @@
 #include "Server.h"
 #include "Interceptors/AuthInterceptorFactory.h"
+#include "Interceptors/ValidatorInterceptosFactory.h"
 #include "ServerConfig.h"
 #include "version.h"
 #include <grpcpp/security/credentials.h>
@@ -58,6 +59,9 @@ void Server::run() {
     creators.push_back(std::unique_ptr<grpc::experimental::ServerInterceptorFactoryInterface>(
         new AuthInterceptorFactory(this)
     ));
+    creators.push_back((std::unique_ptr<grpc::experimental::ServerInterceptorFactoryInterface>)(
+        new ValidatorInterceptorsFactory(this)
+    ));
     this->builder.experimental().SetInterceptorCreators(std::move(creators));
     std::unique_ptr<grpc::Server> server(this->builder.BuildAndStart());
 
@@ -70,10 +74,10 @@ std::string Server::getProtoPackage() {
     return this->protoPackage;
 }
 
-std::vector<Validator*> Server::getValidators() {
+const std::vector<std::unique_ptr<Validator>>& Server::getValidators() {
     return this->validators;
 }
 
-void Server::addValidator(Validator* validator) {
-    this->validators.push_back(validator);
+void Server::addValidator(std::unique_ptr<Validator> validator) {
+    this->validators.push_back(std::move(validator));
 }

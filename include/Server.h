@@ -3,6 +3,7 @@
 #include <grpcpp/server_builder.h>
 #include "ServerConfig.h"
 #include "Validator.h"
+#include <memory>
 #include <string>
 #include <unordered_map>
 #include <vector>
@@ -17,10 +18,10 @@ public:
     std::unordered_map<std::string, std::string> getAuthenicationOnlyMethods();
     void addAuthencationOnlyMethod(std::string serviceName, std::string methodName);
     std::string getProtoPackage();
-    void addValidator(Validator* validator);
-    std::vector<Validator*> getValidators();
+    void addValidator(std::unique_ptr<Validator> validator);
+    const std::vector<std::unique_ptr<Validator>>& getValidators();
 private:
-    std::vector<Validator*> validators;
+    std::vector<std::unique_ptr<Validator>> validators;
     std::unordered_map<std::string, std::string> authroizationOnlyMethods;
     const std::string protoPackage;
     std::vector<grpc::Service*> services;
