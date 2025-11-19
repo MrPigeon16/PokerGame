@@ -9,3 +9,11 @@ class AuthInterceptorFactory : public grpc::experimental::ServerInterceptorFacto
     private:
     Server* server;
 };
+
+class ValidatorInterceptorsFactory : public grpc::experimental::ServerInterceptorFactoryInterface {
+    public:
+    ValidatorInterceptorsFactory(Server* server);
+    grpc::experimental::Interceptor* CreateServerInterceptor(grpc::experimental::ServerRpcInfo* rpc_info) override;
+    private:
+    Server* server;
+};

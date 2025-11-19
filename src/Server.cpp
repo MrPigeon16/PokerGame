@@ -1,8 +1,5 @@
 #include "Server.h"
-#include "Interceptors/AuthInterceptorFactory.h"
-#include "Interceptors/ValidatorInterceptosFactory.h"
-#include "ServerConfig.h"
-#include "version.h"
+#include "InterceptorFactories.h"
 #include <grpcpp/security/credentials.h>
 #include <grpcpp/security/server_credentials.h>
 #include <grpcpp/support/server_interceptor.h>

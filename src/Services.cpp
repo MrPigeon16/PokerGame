@@ -1,5 +1,4 @@
-#include "GrpcServices/AuthServiceImpl.h"
-#include <exception>
+#include "Services.h"
 #include <grpcpp/support/status.h>
 #include <optional>
 #include <sqlite_modern_cpp.h>
@@ -7,7 +6,12 @@
 #include "DbState.h"
 #include "JwtHelper.h"
 #include "openssl/sha.h"
-#include <chrono>
+
+#define assure(request) {\
+    if (request->cancell()) {\
+        return grpc::Status(grpc::StatusCode::CANCELLED, request->cancellmessage());\
+    }\
+}
 
 std::string sha256(const std::string& str) {
     unsigned char hash[SHA256_DIGEST_LENGTH];
@@ -25,10 +29,7 @@ std::string sha256(const std::string& str) {
 
 
 grpc::Status AuthServiceImpl::Signin(grpc::ServerContext* context, const poker::AuthRequest* request, poker::AuthResponse* response) {
-    if (request->cancell()) {
-
-        return grpc::Status(grpc::StatusCode::CANCELLED, request->cancellmessage());
-    }
+    assure(request);
 
     const std::string& email = request->email();
 
@@ -63,10 +64,7 @@ grpc::Status AuthServiceImpl::Signin(grpc::ServerContext* context, const poker::
 
 
 grpc::Status AuthServiceImpl::Login(grpc::ServerContext* context, const poker::AuthRequest* request, poker::AuthResponse* response) {
-    if (request->cancell()) {
-
-        return grpc::Status(grpc::StatusCode::CANCELLED, request->cancellmessage());
-    }
+    assure(request);
  // Yuisj26! pass for ilayGay;
 
     try {

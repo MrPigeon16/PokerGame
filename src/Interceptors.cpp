@@ -1,14 +1,37 @@
-#include "Interceptors/ValidatorInterceptor.h"
-#include "Validator.h"
-#include "Validators.h"
-#include <google/protobuf/descriptor.h>
-#include <google/protobuf/message.h>
+#include "Interceptors.h"
+#include "Server.h"
 #include <grpcpp/support/interceptor.h>
 #include <grpcpp/support/server_interceptor.h>
-#include <grpcpp/support/status.h>
+#include <string>
 #include <unordered_set>
-#include "Interceptors/ValidatorInterceptosFactory.h"
+#include <utility>
+#include "InterceptorFactories.h"
+#include "Validators.h"
 #include <regex>
+#include <google/protobuf/descriptor.h>
+#include <google/protobuf/message.h>
+
+
+AuthInterceptor::AuthInterceptor(grpc::experimental::ServerRpcInfo* rpc_info) : rpc_info(rpc_info) {}
+AuthInterceptor::AuthInterceptor(grpc::experimental::ServerRpcInfo* rpc_info, Server* server) : rpc_info(rpc_info), server(server) {}
+
+void AuthInterceptor::Intercept(grpc::experimental::InterceptorBatchMethods* methods) {
+    if (methods->QueryInterceptionHookPoint(grpc::experimental::InterceptionHookPoints::PRE_SEND_STATUS)) {
+        std::unordered_set<std::string> fullAuthorizationMethodsNames;
+        for (const std::pair<std::string, std::string> pair : this->server->getAuthenicationOnlyMethods()) {
+            fullAuthorizationMethodsNames.insert("/" + server->getProtoPackage()+"."+pair.first+"/"+pair.second);
+        }
+        if (fullAuthorizationMethodsNames.find((std::string)this->rpc_info->method()) != fullAuthorizationMethodsNames.end()) {
+            const auto& test = rpc_info->server_context()->client_metadata();
+            for (const auto& t :test) {
+
+            }
+        }
+    }
+
+    methods->Proceed();
+}
+
 bool PasswordValidator::Validate(const void* password) const {
     const char* str = static_cast<const char*>(password);
     if (!str) return false;
@@ -23,10 +46,6 @@ bool EmailValidator::Validate(const void* email) const {
     };
     const std::regex pattern(R"([A-Za-z0-9]+([._][A-Za-z0-9]+)*@[A-Za-z0-9]+\.[A-Za-z]{2,})");
     return std::regex_match(str, pattern);
-}
-
-grpc::experimental::Interceptor* ValidatorInterceptorsFactory::CreateServerInterceptor(grpc::experimental::ServerRpcInfo* rpc_info) {
-    return new ValidatorInterceptor(rpc_info, server);
 }
 
 ValidatorInterceptor::ValidatorInterceptor(grpc::experimental::ServerRpcInfo* rpc_info) : rpc_info(rpc_info) {}

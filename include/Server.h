@@ -1,12 +1,31 @@
 #pragma once
 #include <grpcpp/impl/service_type.h>
 #include <grpcpp/server_builder.h>
-#include "ServerConfig.h"
-#include "Validator.h"
+#include "Validators.h"
 #include <memory>
 #include <string>
 #include <unordered_map>
 #include <vector>
+
+enum class VersionType {
+    Production,
+    Development
+};
+
+class ServerConfig {
+    public:
+    std::string host;
+    int port;
+    ServerConfig(std::string host, int port) : host(host), port(port), version(VersionType::Development) {}
+    ServerConfig(std::string host, int port, grpc::SslServerCredentialsOptions sslOptions) : host(host), port(port), sslOptions(sslOptions), version(VersionType::Production) {}
+    const grpc::SslServerCredentialsOptions sslOptions;
+    VersionType getVersion() {
+        return this->version;
+    }
+    private:
+    const VersionType version;
+};
+
 class Server {
 public:
     Server(ServerConfig& cfg, std::string protoPackage);

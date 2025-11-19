@@ -1,4 +1,4 @@
-#include "GrpcServices/AuthServiceImpl.h"
+#include "Services.h"
 #include "Server.h"
 #include <grpcpp/grpcpp.h>
 #include <grpcpp/impl/service_type.h>
@@ -7,7 +7,6 @@
 #include <memory>
 #include <string>
 #include <vector>
-#include "ServerConfig.h"
 #include "Validators.h"
 
 /*

@@ -5,8 +5,7 @@
 #include <grpcpp/server_context.h>
 
 class AuthServiceImpl final : public poker::AuthService::Service {
-    public:
-
+public:
     grpc::Status Signin(grpc::ServerContext* context, const poker::AuthRequest* request, poker::AuthResponse* response) override;
 
     grpc::Status Login(grpc::ServerContext* context, const poker::AuthRequest* request, poker::AuthResponse* response) override;
